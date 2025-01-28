@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						  <h1> <font size="8"> Доклад на тему: </font> </h1>
+						  <h2>
+							<font color="70b30f" size="6"> Как работают поисковые кроулеры </font>
+						  </h2>
+						<img alt="Niggers" src="https://media.tenor.com/cceueTeJSjoAAAAi/clippy.gif" width="300" height="300" />
+						</textarea>
+					  </section>
+				</section>
+				<section> 
+					<section data-markdown>
+						<textarea data-markdown>
+							<h1> <font size="8"> Введение </font> <h1>
+							<h2> <font size="6" color="70b30f"> Что такое поисковые кроулеры? </font> </h2>
+							<p> 
+								<font size="5" color="d0d0d0"> Краулер (от английского crawler — «ползать») — это поисковый робот, используемы поисковой системой для обнаружения новых страниц в интернете.
+								Простыми словами, краулер — это поисковый робот Google, «Яндекса» и других поисковых систем.
+								</font>
+							</p>
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1> <font size="8"> Принцип работы поисковых кроулеров </font> </h1>
+						<p> <font color="d0d0d0" size="5">  Принцип работы заключается в постоянном сканировании страниц и нахождении
+							на них ссылок с дальнейшим переходом по ним. Всю собранную информацию робот заносит
+							в специальную базу данных, которая называется индексом. Данные о новых страницах
+							в интернете поисковая машина берет как раз из такого индекса. </font>  </p>
+					</section>
+					<section>	
+						<h2> <font size="6" color="70b30f"> Как поисковый робот видит страницу </font> </h2>
+						<p> <font size="5" color="d0d0d0">
+							Он видит веб-сайт совсем не так, как его видит пользователь.
+							Вместо привычного нам визуального контента паук обращает внимание на заголовок, ответ и IP-адрес: 
+						</font> </p>
+						<img class="r-stretch" src="https://kokoc.com/upload/terminy/8/image6.png" />
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<h2> <font size="6" color="70b30f">
+								Поисковый робот анализирует следующие параметры:
+							</font></h2>
+							<ol> <font size="5" color="d0d0d0">
+								<li> Ответ HTTP-заголовка страницы. </li>
+								<li> Текущий веб-сервер </li>
+								<li> Текущую дату в GMT-формате. </li>
+								<li> Тип контента. </li>
+								<li> Объем контента. </li>
+								<li> Наличие Keep-Alive (постоянное HTTP-соединение). </li>
+								<li> Локейшн (URL сайта / страницы). </li>
+								<li> Код перенаправления. </li>
+								<li> IP-адрес. </li>
+								<li> Установленные сайтом правила cookie. </li>
+								<li> Внешние и внутренние ссылки на странице. </li>
+							</font>
+							</ol>
+						</textarea>
+					</section>
+					<section>
+						<h2> <font size="6" color="70b30f">
+							Устройство краулеров включает компоненты, такие как:
+						</font></h2>
+						<ol> <font size="5" color="d0d0d0">
+							<li>Downloader (загрузчик), который скачивает HTML-код страницы с сервера;</li>
+							<li>Parser (парсер), который разбирает HTML-код и извлекает из него нужную информацию;</li>
+							<li>Frontier (фронтенд), который управляет очередью ссылок для сканирования;</li>
+							<li>Indexer (индексатор), который индексирует информацию и создает поисковую базу данных.</li>
+
+						</ol></font>
+						<p> <font size="5" color="d0d0d0">
+							Комплексное устройство и продуманный принцип работы краулеров позволяют эффективно
+							сканировать и индексировать огромное количество веб-страниц. Это позволяет поисковым
+							системам предоставлять пользователям актуальные и релевантные результаты поиска.
+						</font></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1> <font size="8">
+							Как работает робот Google и «Яндекса»
+						</font> </h1>
+						<p> <font size="5" color="d0d0d0">
+							Если представить алгоритм взаимодействия
+							поискового робота со страницей обобщенно,
+							оно выглядит следующим образом:
+							<ol>
+								<li> Переход по URL. </li> 
+								<li> Сканирование контента страницы. </li> 
+								<li> Сохранение содержимого на сервере. На этом этапе может происходить 
+									конвертация формата данных в удобочитаемый для поисковой машины формат. </li> 
+								<li> Повторение указанной цепочки с переходом по новому URL. </li>
+							</ol>
+						</font></p>
+					</section>
+					<section>
+						<p> <font size="5" color="d0d0d0">
+							Все это регламентируется поисковой системой. Соответственно, нельзя вывести какие-то общие цифры,
+							но можно посмотреть на поведение типичного, на примере паука Googlebot:
+						</font> </p>
+						<img src="https://kokoc.com/upload/terminy/8/image8.png" />
+					</section>
+					<section>
+						<p> <font size="5" color="d0d0d0">
+							У «Яндекса» разноцелевых роботов гораздо меньше: по разным оценкам — от четырех до пяти штук.
+							Основных пауков у «Яндекса» два: <font color="d20adf"> стандартный бот </font> и <font color="d20adf">быстрый паук Orange</font>.	
+						</font></p>
+					</section>
+					<section>
+						<h2> <font size="6" color="70b30f">
+							Работа краулера на примере поискового
+							робота «Яндекса» выглядит так:
+						</font></h2>
+						<p> <font size="5" color="d0d0d0">
+							<ol>
+								<li>Планировщик строит очередность сканирования.</li>
+								<li>Этот маршрут отправляется роботу.</li>
+								<li>Он обходит документы. </li>
+								<li>Если сайт отдает корректный ответ, он скачивает данные.</li>
+								<li>Самостоятельно идентифицирует параметры документа, включая язык.</li>
+								<li>Затем он отправляет полученные сведения в кэш «Яндекса» или иное хранилище.</li>
+							</ol>
+						</font></p>
+					</section>
+					<section>
+						<h2> <font size="6" color="70b30f">
+							Вот примерная визуализация этих процессов:	
+						</font></h2>
+						<img class="r-stretch" src="https://kokoc.com/upload/terminy/8/image2.png" />
+					</section>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1> <font size="8">
+							Почему веб-краулеры важны для SEO
+						</font> </h1>
+						<p> <font size="5" color="d20adf">
+							Цель SEO — сделать ваш контент легко доступным для пользователей
+							при поиске. Google не сможет ранжировать ваш контент,
+							если он не проиндексирован.
+						</font></p>
+						<p> <font size="5" color="d0d0d0">
+							Поисковые роботы также полезны в других областях. Например, сайты электронной
+							коммерции анализируют конкурентов, собирая данные о продукции и ценах через "веб-скрапинг". Веб-скраперы ориентированы на определенные элементы HTML, в отличие от веб-краулеров, которые собирают весь контент.
+							Существуют также инструменты SERP API для сбора данных о поисковой выдаче.
+						</font></p>
+					</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+					  <h1><font size="8">Примеры веб-краулеров</font></h1>
+					  <p> <font size="6" color="d0d0d0">
+						Поисковые системы имеют несколько типов поисковых роботов.
+						Например, у Google есть 17 типов ботов:
+					  </p></font>
+					  <ul>
+						<li>APIs-Google</li>
+						<li>AdSense</li>
+						<li>Google Read Aloud</li>
+						<li>Duplex on the web</li>
+						<li>Web Light</li>
+						<li>И другие...</li>
+					  </ul>
+					</textarea>
+				  </section>
+				<section>
+					<h1> <font size="8">
+						Заключение
+					</font> </h1>
+					<p> <font size="5" color="d0d0d0">
+						Поисковые кроулеры играют важную роль в том, как функционируют поисковые системы. Постоянно краулируя и индексируя веб-контент, они помогают пользователям быстро и эффективно находить релевантную информацию. Понимание того, как они работают, может помочь веб-мастерам 
+						оптимизировать свои сайты для лучшей видимости в результатах поиска.
+					</font></p>
+				</section>
+				<section>
+					<h1> <font size="8">
+						Спасибо за внимание и хорошего дня
+					</font></h1>
+					<img class="r-stretch" src="https://media1.tenor.com/m/yF6v286JBrsAAAAd/frog-spin.gif" />
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			
+			Reveal.initialize({
+				hash: true,
+				progress: true, 
+
+				
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
